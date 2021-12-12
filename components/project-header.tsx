@@ -1,20 +1,20 @@
-import Avatar from './avatar'
-import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
-import PostTitle from './post-title'
-import Author from '../types/author'
+import Avatar from "./avatar";
+import DateFormatter from "./date-formatter";
+import CoverImage from "./cover-image";
+import ProjectTitle from "./project-title";
+import Author from "../types/author";
 
 type Props = {
-  title: string
-  coverImage: string
-  date: string
-  author: Author
-}
+  title: string;
+  coverImage: string;
+  date: string;
+  author: Author;
+};
 
-const PostHeader = ({ title, coverImage, date, author }: Props) => {
+const ProjectHeader = ({ title, coverImage, date, author }: Props) => {
   return (
     <>
-      <PostTitle>{title}</PostTitle>
+      <ProjectTitle>{title}</ProjectTitle>
       <div className="hidden md:block md:mb-12">
         <Avatar name={author.name} picture={author.picture} />
       </div>
@@ -30,7 +30,7 @@ const PostHeader = ({ title, coverImage, date, author }: Props) => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default PostHeader
+export default ProjectHeader;

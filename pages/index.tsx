@@ -1,58 +1,57 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPosts } from '../lib/api'
-import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
-import Post from '../types/post'
+import Container from "../components/container";
+import MoreStories from "../components/more-stories";
+import HeroProject from "../components/hero-project";
+import Intro from "../components/intro";
+import Layout from "../components/layout";
+import { getAllProjects } from "../lib/api";
+import Head from "next/head";
+import Project from "../types/project";
 
 type Props = {
-  allPosts: Post[]
-}
+  allProjects: Project[];
+};
 
-const Index = ({ allPosts }: Props) => {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+const Index = ({ allProjects }: Props) => {
+  const heroProject = allProjects[0];
+  const moreProjects = allProjects.slice(1);
   return (
     <>
       <Layout>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>Mou Dev</title>
         </Head>
         <Container>
           <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
+          {heroProject && (
+            <HeroProject
+              title={heroProject.title}
+              coverImage={heroProject.coverImage}
+              date={heroProject.date}
+              author={heroProject.author}
+              slug={heroProject.slug}
+              excerpt={heroProject.excerpt}
             />
           )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {moreProjects.length > 0 && <MoreStories projects={moreProjects} />}
         </Container>
       </Layout>
     </>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-  ])
+  const allProjects = getAllProjects([
+    "title",
+    "date",
+    "slug",
+    "author",
+    "coverImage",
+    "excerpt",
+  ]);
 
   return {
-    props: { allPosts },
-  }
-}
+    props: { allProjects },
+  };
+};
