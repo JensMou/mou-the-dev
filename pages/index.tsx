@@ -1,19 +1,9 @@
 import Container from "../components/container";
-import MoreStories from "../components/more-stories";
-import HeroProject from "../components/hero-project";
 import Intro from "../components/intro";
 import Layout from "../components/layout";
-import { getAllProjects } from "../lib/api";
 import Head from "next/head";
-import Project from "../types/project";
-
-type Props = {
-  allProjects: Project[];
-};
-
-const Index = ({ allProjects }: Props) => {
-  const heroProject = allProjects[0];
-  const moreProjects = allProjects.slice(1);
+import Alert from "../components/alert";
+const Index = () => {
   return (
     <>
       <Layout>
@@ -21,37 +11,12 @@ const Index = ({ allProjects }: Props) => {
           <title>Mou Dev - Home</title>
         </Head>
         <Container>
-          <Intro />
-          {heroProject && (
-            <HeroProject
-              title={heroProject.title}
-              coverImage={heroProject.coverImage}
-              date={heroProject.date}
-              author={heroProject.author}
-              slug={heroProject.slug}
-              excerpt={heroProject.excerpt}
-            />
-          )}
-          {moreProjects.length > 0 && <MoreStories projects={moreProjects} />}
+          <Intro title="Hello." />
         </Container>
       </Layout>
+      <Alert />
     </>
   );
 };
 
 export default Index;
-
-export const getStaticProps = async () => {
-  const allProjects = getAllProjects([
-    "title",
-    "date",
-    "slug",
-    "author",
-    "coverImage",
-    "excerpt",
-  ]);
-
-  return {
-    props: { allProjects },
-  };
-};

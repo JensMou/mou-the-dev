@@ -1,29 +1,24 @@
-import Container from "./container";
-import cn from "classnames";
 import { useState } from "react";
+import { useAppSelector, useAppDispatch } from "../hooks";
 
-type Props = {
-  preview?: boolean;
-};
+import { hide } from "../slices/alertSlice";
 
-const Alert = ({ preview }: Props) => {
-  const [closed, setClosed] = useState(false);
-  if (closed) {
+const Alert = () => {
+  const open = useAppSelector((state) => state.alert.open);
+  const dispatch = useAppDispatch();
+
+  if (!open) {
     return null;
   }
+
   return (
-    <div
-      className={cn("border-b", {
-        "bg-accent-7 border-accent-7 text-white": preview,
-        "bg-accent-1 border-accent-2": !preview,
-      })}
-    >
-      <Container>
-        <div className="flex justify-center py-2 text-center text-sm fle">
-          <p className="mr-5">This page does not use cookies</p>
-          <button onClick={() => setClosed(true)}>X</button>
-        </div>
-      </Container>
+    <div className="absolute bottom-0 right-0 bg-black text-white p-5 font-mono">
+      <div className="flex">
+        <button className="hover:text-primary" onClick={() => dispatch(hide())}>
+          X
+        </button>
+        <p className="ml-5">This page does not use cookies</p>
+      </div>
     </div>
   );
 };
