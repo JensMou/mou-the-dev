@@ -47,7 +47,7 @@ const Footer = () => {
               />
             </a>
           </div>
-          <p className="mt-5">Copyright @{year}</p>
+          <p className="mt-5">© Jens Mouridtsen {year}</p>
         </div>
       </Container>
     </footer>
