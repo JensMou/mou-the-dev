@@ -31,7 +31,10 @@ const Meta = () => {
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta name="description" content={`This is a personal page of Mou`} />
+      <meta
+        name="description"
+        content={`This is a personal page of Jens Mou`}
+      />
     </Head>
   );
 };

@@ -18,7 +18,7 @@ const Index = ({ allProjects }: Props) => {
     <>
       <Layout>
         <Head>
-          <title>Mou Dev</title>
+          <title>Mou Dev - Home</title>
         </Head>
         <Container>
           <Intro />
