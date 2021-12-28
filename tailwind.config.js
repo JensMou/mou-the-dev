@@ -8,6 +8,8 @@ module.exports = {
         black: "#010001",
         danger: "#ED254E",
         warning: "#E3B23C",
+        golden: "#FFD700",
+        lightgrey: "#cfcfcf",
       },
       spacing: {
         28: "7rem",

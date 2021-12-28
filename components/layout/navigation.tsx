@@ -10,6 +10,9 @@ const Navigation = () => {
         <Link href="/projects">
           <a className="hover:text-primary">Projects</a>
         </Link>
+        <Link href="/about">
+          <a className="hover:text-primary">About</a>
+        </Link>
       </div>
       <div className="flex lg:hidden">
         <svg

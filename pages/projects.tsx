@@ -1,8 +1,7 @@
 import Container from "../components/container";
-import MoreStories from "../components/more-stories";
-import HeroProject from "../components/hero-project";
+import HeroProject from "../components/project/hero-project";
 import Intro from "../components/intro";
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 import { getAllProjects } from "../lib/api";
 import Head from "next/head";
 import Project from "../types/project";
@@ -13,7 +12,6 @@ type Props = {
 
 const Projects = ({ allProjects }: Props) => {
   const heroProject = allProjects[0];
-  const moreProjects = allProjects.slice(1);
   return (
     <>
       <Layout>
@@ -21,7 +19,7 @@ const Projects = ({ allProjects }: Props) => {
           <title>Mou Dev - Projects</title>
         </Head>
         <Container>
-          <Intro title="Projects." />
+          <Intro title="Projects" />
           {heroProject && (
             <HeroProject
               title={heroProject.title}
@@ -32,7 +30,6 @@ const Projects = ({ allProjects }: Props) => {
               excerpt={heroProject.excerpt}
             />
           )}
-          {moreProjects.length > 0 && <MoreStories projects={moreProjects} />}
         </Container>
       </Layout>
     </>

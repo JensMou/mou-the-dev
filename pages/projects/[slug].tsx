@@ -1,27 +1,22 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Container from "../../components/container";
-import ProjectBody from "../../components/project-body";
-import Header from "../../components/header";
-import ProjectHeader from "../../components/project-header";
-import Layout from "../../components/layout";
+import ProjectBody from "../../components/project/project-body";
+import Header from "../../components/layout/header";
+import ProjectHeader from "../../components/project/project-header";
+import Layout from "../../components/layout/layout";
 import { getProjectBySlug, getAllProjects } from "../../lib/api";
-import ProjectTitle from "../../components/project-title";
+import ProjectTitle from "../../components/project/project-title";
 import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
 import ProjectType from "../../types/project";
 
 type Props = {
   project: ProjectType;
-  moreProjects: ProjectType[];
   preview?: boolean;
 };
 
-const Project = ({
-  project,
-  //moreProject,
-  preview,
-}: Props) => {
+const Project = ({ project, preview }: Props) => {
   const router = useRouter();
   if (!router.isFallback && !project?.slug) {
     return <ErrorPage statusCode={404} />;
