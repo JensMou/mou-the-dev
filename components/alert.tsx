@@ -12,12 +12,12 @@ const Alert = () => {
   }
 
   return (
-    <div className="absolute bottom-0 right-0 bg-black text-white p-5 font-mono">
+    <div className="absolute top-0 left-0 bg-black text-white p-5 font-mono">
       <div className="flex">
+        <p className="mr-5">Hi! This page does not use cookies.</p>
         <button className="hover:text-primary" onClick={() => dispatch(hide())}>
           X
         </button>
-        <p className="ml-5">This page does not use cookies</p>
       </div>
     </div>
   );

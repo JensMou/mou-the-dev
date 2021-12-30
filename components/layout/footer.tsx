@@ -1,12 +1,14 @@
-import Container from "../container";
+import Container from "../Container";
 import Image from "next/image";
 
-import AvatarPic from "../../public/favicon/avatars.png";
+import AvatarPic from "../../public/avatars/JensMou.png";
 import LinkedinPic from "../../public/icons/linkedin.svg";
 import InstagramPic from "../../public/icons/instagram.svg";
 import GithubPic from "../../public/icons/github.svg";
+import TwitterPic from "../../public/icons/twitter.svg";
+
 import Link from "next/link";
-import Alert from "../alert";
+import Alert from "../Alert";
 const Footer = () => {
   const d = new Date();
   let year = d.getFullYear();
@@ -29,16 +31,11 @@ const Footer = () => {
             <SomeLink href="https://github.com/JensMou/">
               <GithubPic />
             </SomeLink>
+            <SomeLink href="https://twitter.com/JensMou">
+              <TwitterPic />
+            </SomeLink>
           </div>
           <div className="flex mt-8 md:mt-0">
-            <div className="mr-3 w-12 h-12">
-              <Image
-                src={AvatarPic}
-                height="100%"
-                width="100%"
-                alt="Avatar illustration"
-              />
-            </div>
             <p className="text-l pt-3 font-extralight drop-shadow-2xl ">
               © Jens Mouridtsen {year}
             </p>

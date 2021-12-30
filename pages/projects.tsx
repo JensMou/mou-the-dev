@@ -1,7 +1,7 @@
-import Container from "../components/container";
-import HeroProject from "../components/project/hero-project";
-import Intro from "../components/intro";
-import Layout from "../components/layout/layout";
+import Container from "../components/Container";
+import HeroProject from "../components/project/ProjectPreview";
+import Intro from "../components/Intro";
+import Layout from "../components/layout/Layout";
 import { getAllProjects } from "../lib/api";
 import Head from "next/head";
 import Project from "../types/project";
@@ -11,7 +11,6 @@ type Props = {
 };
 
 const Projects = ({ allProjects }: Props) => {
-  const heroProject = allProjects[0];
   return (
     <>
       <Layout>
@@ -20,16 +19,16 @@ const Projects = ({ allProjects }: Props) => {
         </Head>
         <Container>
           <Intro title="Projects" />
-          {heroProject && (
+          {allProjects.map((p) => (
             <HeroProject
-              title={heroProject.title}
-              coverImage={heroProject.coverImage}
-              date={heroProject.date}
-              author={heroProject.author}
-              slug={heroProject.slug}
-              excerpt={heroProject.excerpt}
+              title={p.title}
+              coverImage={p.coverImage}
+              date={p.date}
+              author={p.author}
+              slug={p.slug}
+              excerpt={p.excerpt}
             />
-          )}
+          ))}
         </Container>
       </Layout>
     </>

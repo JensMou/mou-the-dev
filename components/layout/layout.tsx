@@ -1,6 +1,6 @@
-import Footer from "./footer";
-import Meta from "./meta";
-import Navigation from "./navigation";
+import Footer from "./Footer";
+import Meta from "./Meta";
+import Navigation from "./Navigation";
 
 type Props = {
   preview?: boolean;
