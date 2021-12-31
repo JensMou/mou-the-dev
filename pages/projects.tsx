@@ -19,8 +19,9 @@ const Projects = ({ allProjects }: Props) => {
         </Head>
         <Container>
           <Intro title="Projects" />
-          {allProjects.map((p) => (
+          {allProjects.map((p, i) => (
             <ProjectPreview
+              key={p.slug + i}
               title={p.title}
               coverImage={p.coverImage}
               date={p.date}

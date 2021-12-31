@@ -28,12 +28,12 @@ const About = () => {
           <Intro title="About" />
           <dl>
             {skillArr.map((e, i) => (
-              <>
+              <div key={e.title + i}>
                 <dt>{e.title}</dt>
                 <dd>
                   <RatingStars rating={e.rating} />
                 </dd>
-              </>
+              </div>
             ))}
           </dl>
         </Container>
