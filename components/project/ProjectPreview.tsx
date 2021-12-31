@@ -22,27 +22,19 @@ const HeroProject = ({
   slug,
 }: Props) => {
   return (
-    <section>
-      <div className="mb-8 md:mb-16">
-        <CoverImage title={title} src={coverImage} slug={slug} />
-      </div>
-      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
-        <div>
-          <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
-            <Link as={`/projects/${slug}`} href="/projects/[slug]">
-              <a className="hover:underline">{title}</a>
-            </Link>
-          </h3>
-          <div className="mb-4 md:mb-0 text-lg">
-            <DateFormatter dateString={date} />
-          </div>
-        </div>
-        <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+    <Link as={`/projects/${slug}`} href="/projects/[slug]">
+      <a className="hover:underline border-2 rounded-md p-8">
+        <section className="flex flex-col overflow-hidden">
+          <CoverImage title={title} src={coverImage} slug={slug} />
+          <h3 className="my-4 text-4xl lg:text-6xl leading-tight">{title}</h3>
           <Avatar name={author.name} picture={author.picture} />
-        </div>
-      </div>
-    </section>
+          <DateFormatter dateString={date} />
+          <p className="text-lg mt-4 leading-relaxed max-h-40 overflow-ellipsis">
+            {excerpt}
+          </p>
+        </section>
+      </a>
+    </Link>
   );
 };
 
