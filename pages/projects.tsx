@@ -1,5 +1,5 @@
 import Container from "../components/Container";
-import HeroProject from "../components/project/ProjectPreview";
+import ProjectPreview from "../components/project/ProjectPreview";
 import Intro from "../components/Intro";
 import Layout from "../components/layout/Layout";
 import { getAllProjects } from "../lib/api";
@@ -20,7 +20,7 @@ const Projects = ({ allProjects }: Props) => {
         <Container>
           <Intro title="Projects" />
           {allProjects.map((p) => (
-            <HeroProject
+            <ProjectPreview
               title={p.title}
               coverImage={p.coverImage}
               date={p.date}

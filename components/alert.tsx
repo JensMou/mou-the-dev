@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useAppSelector, useAppDispatch } from "../hooks";
 
 import { hide } from "../slices/alertSlice";

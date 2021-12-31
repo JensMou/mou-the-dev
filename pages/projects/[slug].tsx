@@ -27,7 +27,7 @@ const Project = ({ project, preview }: Props) => {
           className="text-l cursor-pointer py-5"
           onClick={() => router.back()}
         >
-          {"<-"} go back
+          {"<-"} Go Back
         </div>
         {router.isFallback ? (
           <ProjectTitle>Loading…</ProjectTitle>

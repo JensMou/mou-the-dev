@@ -13,8 +13,7 @@ const Index = () => {
         <Container>
           <Intro title="Hello" />
           <p className="text-xl">
-            I'm a frontend developer with a portfolio page. <br /> Original -
-            right?
+            I'm a frontend developer personal page. <br /> Original... right?
           </p>
         </Container>
       </Layout>
