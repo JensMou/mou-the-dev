@@ -8,7 +8,7 @@ import GithubPic from "../../public/icons/github.svg";
 import TwitterPic from "../../public/icons/twitter.svg";
 
 import Link from "next/link";
-import Alert from "../Alert";
+
 const Footer = () => {
   const d = new Date();
   let year = d.getFullYear();
@@ -42,7 +42,6 @@ const Footer = () => {
           </div>
         </div>
       </Container>
-      <Alert />
     </footer>
   );
 };

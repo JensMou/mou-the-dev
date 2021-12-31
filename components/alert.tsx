@@ -11,9 +11,9 @@ const Alert = () => {
   }
 
   return (
-    <div className="absolute top-0 left-0 bg-black text-white p-5 font-mono">
+    <div className="sticky w-80 z-10 left-0 bottom-0 p-2 bg-black text-white font-mono ">
       <div className="flex">
-        <p className="mr-5">Hi! This page does not use cookies.</p>
+        <p className="mr-5">This page does not use cookies.</p>
         <button className="hover:text-primary" onClick={() => dispatch(hide())}>
           X
         </button>

@@ -19,7 +19,7 @@ const Projects = ({ allProjects }: Props) => {
         </Head>
         <Container>
           <Intro title="Projects" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             {allProjects.map((p, i) => (
               <ProjectPreview
                 key={p.slug + i}
