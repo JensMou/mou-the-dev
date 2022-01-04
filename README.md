@@ -1,1 +1,5 @@
-#Mou the dev is a portfolio and personal page
+# Description
+This is a personal page for Jens Mouridtsen
+
+# Stack
+The techstack includes next.js, tailwind
