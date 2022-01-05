@@ -1,7 +1,4 @@
 import Container from "../Container";
-import Image from "next/image";
-
-import AvatarPic from "../../public/avatars/JensMou.png";
 import LinkedinPic from "../../public/icons/linkedin.svg";
 import InstagramPic from "../../public/icons/instagram.svg";
 import GithubPic from "../../public/icons/github.svg";
