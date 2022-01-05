@@ -1,7 +1,7 @@
 import Footer from "./Footer";
 import Meta from "./Meta";
 import Navigation from "./Navigation";
-import Alert from "../Alert";
+import CookieAlert from "../CookieAlert";
 type Props = {
   preview?: boolean;
   children: React.ReactNode;
@@ -15,7 +15,7 @@ const Layout = ({ preview, children }: Props) => {
       <div className="min-h-screen">
         <main>{children}</main>
       </div>
-      <Alert />
+      <CookieAlert />
       <Footer />
     </>
   );

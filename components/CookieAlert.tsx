@@ -2,7 +2,7 @@ import { useAppSelector, useAppDispatch } from "../hooks";
 
 import { hide } from "../slices/alertSlice";
 
-const Alert = () => {
+const CookieAlert = () => {
   const open = useAppSelector((state) => state.alert.open);
   const dispatch = useAppDispatch();
 
@@ -22,4 +22,4 @@ const Alert = () => {
   );
 };
 
-export default Alert;
+export default CookieAlert;
