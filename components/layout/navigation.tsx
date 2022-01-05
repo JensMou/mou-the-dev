@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import ThemeSwitch from "../ThemeSwitch";
 const Navigation = () => {
   return (
     <nav className="bg-white shadow-medium sticky top-0 py-8">
@@ -14,6 +14,7 @@ const Navigation = () => {
           <Link href="/about">
             <a className="hover:text-primary">About</a>
           </Link>
+          <ThemeSwitch />
         </div>
       </div>
     </nav>
