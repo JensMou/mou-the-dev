@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { WritableDraft } from "immer/dist/internal";
 import type { RootState } from "../store";
 
 interface ThemeState {

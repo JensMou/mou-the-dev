@@ -5,20 +5,10 @@ import cs from "classnames";
 import { useAppSelector, useAppDispatch } from "../hooks";
 
 import { setTheme } from "../slices/themeSlice";
-import { useEffect } from "react";
+
 const ThemeSwitch = () => {
   const darkTheme = useAppSelector((state) => state.theme.darkTheme);
   const dispatch = useAppDispatch();
-
-  /**
-   * If theme is set in local storage, set it initially
-   */
-  useEffect(() => {
-    dispatch(setTheme({ darkTheme: localStorage.getItem("darkTheme") }));
-    return () => {
-      dispatch(setTheme({ darkTheme }));
-    };
-  }, []);
 
   return (
     <div
