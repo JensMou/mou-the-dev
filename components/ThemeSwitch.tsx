@@ -5,10 +5,15 @@ import cs from "classnames";
 import { useAppSelector, useAppDispatch } from "../hooks";
 
 import { setTheme } from "../slices/themeSlice";
+import { useEffect } from "react";
 
 const ThemeSwitch = () => {
   const darkTheme = useAppSelector((state) => state.theme.darkTheme);
   const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    setClassTheme(darkTheme);
+  }, [darkTheme]);
 
   return (
     <div
@@ -29,3 +34,14 @@ const ThemeSwitch = () => {
 };
 
 export default ThemeSwitch;
+
+function setClassTheme(darkTheme: boolean) {
+  const d = document.documentElement;
+  const themes = ["light", "dark"];
+  d.classList.remove(...themes);
+  if (darkTheme) {
+    d.setAttribute("class", "dark");
+  } else {
+    d.setAttribute("class", "light");
+  }
+}

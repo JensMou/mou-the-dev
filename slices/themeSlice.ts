@@ -13,7 +13,6 @@ export const themeSlice = createSlice({
   reducers: {
     setTheme: (state, action) => {
       state.darkTheme = action.payload.darkTheme;
-      setClassTheme(action.payload.darkTheme);
     },
   },
 });
@@ -23,14 +22,3 @@ export const { setTheme } = themeSlice.actions;
 export const selectTheme = (state: RootState) => state.theme.darkTheme;
 
 export default themeSlice.reducer;
-
-function setClassTheme(darkTheme: boolean) {
-  const d = document.documentElement;
-  const themes = ["light", "dark"];
-  d.classList.remove(...themes);
-  if (darkTheme) {
-    d.setAttribute("class", "dark");
-  } else {
-    d.setAttribute("class", "light");
-  }
-}
