@@ -8,9 +8,4 @@ Pengesparen
     - Man indtaster omkostninger og man får så tildelt blogindlæg
 
 #Frameworks/Use
-https://app.svgator.com/
-https://www.vantajs.com/?effect=waves
 https://www.i18next.com/ (engelsk/dansk)
-
-#UI
-Theme switch
