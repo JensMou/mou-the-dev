@@ -33,7 +33,7 @@ const Footer = () => {
             </SomeLink>
           </div>
           <div className="flex mt-8 md:mt-0">
-            <p className="text-l pt-3 font-extralight drop-shadow-2xl ">
+            <p className="text-text text-l pt-3 font-extralight drop-shadow-2xl ">
               © Jens Mouridtsen {year}
             </p>
           </div>
@@ -52,7 +52,7 @@ const SomeLink = ({ href, children }: SOMELinkImgProps) => {
   return (
     <Link href={href}>
       <a className="mx-5" target="_blank" rel="noopener">
-        <div className="w-10 h-10 hover:text-primary">{children}</div>
+        <div className="w-10 h-10 text-text hover:text-primary">{children}</div>
       </a>
     </Link>
   );

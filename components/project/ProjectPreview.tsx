@@ -23,7 +23,7 @@ const HeroProject = ({
 }: Props) => {
   return (
     <Link as={`/projects/${slug}`} href="/projects/[slug]">
-      <a className="hover:underline border-2 rounded-md p-8">
+      <a className="bg-foreground dark:bg-foregroundDark hover:underline rounded-md p-8">
         <section className="flex flex-col overflow-hidden">
           <CoverImage title={title} src={coverImage} slug={slug} />
           <h3 className="my-4 text-4xl lg:text-6xl leading-tight">{title}</h3>

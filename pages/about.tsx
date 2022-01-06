@@ -3,7 +3,6 @@ import Intro from "../components/Intro";
 import Layout from "../components/layout/Layout";
 import Head from "next/head";
 import Star from "../public/icons/star.svg";
-import classNames from "classnames";
 
 type SkillArrProp = {
   title: string;
@@ -51,7 +50,7 @@ const RatingStars = ({ rating }: RatingStarsProps): React.ReactElement => {
     <div className="flex">
       {[...Array(numberOfStars)].map((e, i) => {
         return (
-          <div className="w-10 mr-2 my-2">
+          <div key={i} className="w-10 mr-2 my-2">
             <Star
               key={i + "star"}
               className={rating >= i + 1 ? "text-golden" : "text-lightgrey"}

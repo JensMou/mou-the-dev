@@ -5,8 +5,15 @@ module.exports = {
     extend: {
       colors: {
         primary: "#067BC2",
-        white: "#FFFCFF",
-        black: "#010001",
+
+        text: "#121212",
+        background: "#e7e7e7",
+        foreground: "#FAFAFB",
+
+        textDark: "#FAFAFB",
+        backgroundDark: "#222",
+        foregroundDark: "#121212",
+
         danger: "#ED254E",
         warning: "#E3B23C",
         golden: "#FFD700",

@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body className="bg-white text-black dark:bg-gray-900 dark:text-lightgrey">
+        <body className="bg-background dark:bg-backgroundDark text-text dark:text-textDark">
           <Main />
           <NextScript />
         </body>

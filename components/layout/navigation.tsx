@@ -2,9 +2,13 @@ import Link from "next/link";
 import ThemeSwitch from "../ThemeSwitch";
 const Navigation = () => {
   return (
-    <nav className="bg-white shadow-medium sticky top-0 py-8">
+    <nav className="bg-foreground dark:bg-foregroundDark shadow-xl sticky top-0 py-5">
       <div className="container mx-auto">
-        <div className={"text-xl space-x-6 space-x-8 flex justify-end px-5"}>
+        <div
+          className={
+            "text-xl space-x-6 space-x-8 flex justify-center sm:justify-end px-5"
+          }
+        >
           <Link href="/">
             <a className="hover:text-primary">Hello</a>
           </Link>

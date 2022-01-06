@@ -21,7 +21,7 @@ const ThemeSwitch = () => {
       onClick={() => dispatch(setTheme({ darkTheme: !darkTheme }))}
     >
       {darkTheme ? (
-        <div className={cs("h-full w-full absolute left-0 top-0 text-black")}>
+        <div className={cs("h-full w-full absolute left-0 top-0 text-primary")}>
           <Moon />
         </div>
       ) : (
