@@ -30,8 +30,8 @@ module.exports = {
       },
       theme: {
         fontFamily: {
-          sans: ["Lato", "ui-sans-serif", "system-ui", "sans-serif"],
-          serif: ["Roboto Slab", "ui-serif", "Georgia", "serif"],
+          sans: ["Commissioner", "ui-sans-serif", "system-ui", "sans-serif"],
+          serif: ["Fraunces", "ui-serif", "Georgia", "serif"],
           mono: ["ui-monospace", "SFMono-Regular"],
           display: ["Oswald"],
           body: ["Lato", "ui-sans-serif", "system-ui", "sans-serif"],

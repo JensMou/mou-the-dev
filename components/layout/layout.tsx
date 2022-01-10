@@ -12,7 +12,7 @@ const Layout = ({ preview, children }: Props) => {
     <>
       <Navigation />
       <Meta />
-      <div className="min-h-screen">
+      <div className="font-sans min-h-screen">
         <main>{children}</main>
       </div>
       <CookieAlert />
