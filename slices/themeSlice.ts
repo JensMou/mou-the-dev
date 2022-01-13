@@ -2,10 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { RootState } from "../store";
 
 interface ThemeState {
-  darkTheme: boolean;
+  darkTheme?: boolean;
 }
 
-const initialState: ThemeState = { darkTheme: false };
+const initialState: ThemeState = { darkTheme: undefined };
 
 export const themeSlice = createSlice({
   name: "theme",

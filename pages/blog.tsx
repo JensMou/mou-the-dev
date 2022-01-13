@@ -3,7 +3,7 @@ import Intro from "../components/Intro";
 import Layout from "../components/layout/Layout";
 import Head from "next/head";
 
-const About = () => {
+const Blog = () => {
   return (
     <>
       <Layout>
@@ -18,4 +18,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Blog;

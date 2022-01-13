@@ -2,41 +2,32 @@ import Container from "../components/Container";
 import Intro from "../components/Intro";
 import Layout from "../components/layout/Layout";
 import Head from "next/head";
-import RatingStars from "../components/RatingStars";
+import Image from "next/image";
+import ProfileAvatar from "../public/avatars/JensMou.png";
 
-type SkillArrProp = {
-  title: string;
-  rating: number;
-};
-const skillArr: SkillArrProp[] = [
-  { title: "JavaScript", rating: 6 },
-  { title: "React", rating: 6 },
-  { title: "CSS", rating: 5 },
-  { title: "TypeScript", rating: 5 },
-  { title: "NextJS", rating: 3 },
-];
 const Index = () => {
   return (
     <>
       <Layout>
         <Head>
-          <title>Mou Dev - Hello</title>
+          <title>Mou Dev - Home</title>
         </Head>
         <Container>
-          <Intro title="Hello" />
-          <p className="text-xl">
-            I'm a frontend developer personal page. <br /> Original... right?
-          </p>
-          <dl>
-            {skillArr.map((e, i) => (
-              <div key={e.title + i}>
-                <dt>{e.title}</dt>
-                <dd>
-                  <RatingStars rating={e.rating} />
-                </dd>
-              </div>
-            ))}
-          </dl>
+          <div className="flex flex-col h-80v justify-center">
+            <Intro title="Hello!" centered colorfull />
+            <p className="text-xl text-center leading-10">
+              I'm a <strong>frontend developer</strong> working in{" "}
+              <strong>web development</strong>, <br /> inpired by{" "}
+              <strong>great team dynamics</strong>, <strong>new tech</strong>{" "}
+              and <strong>other developers</strong>.
+              <br />
+              This is my personal <strong>portfolio/blog</strong>. <br />
+              <strong>Original</strong>... right?
+            </p>
+            <div className="w-44 mt-10 mx-auto">
+              <Image src={ProfileAvatar} />
+            </div>
+          </div>
         </Container>
       </Layout>
     </>

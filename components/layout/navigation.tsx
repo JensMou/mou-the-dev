@@ -8,9 +8,10 @@ type NavItemProp = {
   href: string;
 };
 const navItems: NavItemProp[] = [
-  { title: "Hello", href: "/" },
-  { title: "Projects", href: "/projects" },
+  { title: "Home", href: "/" },
+  { title: "Work", href: "/work" },
   { title: "Blog", href: "/blog" },
+  { title: "About", href: "/about" },
 ];
 
 const Navigation = () => {

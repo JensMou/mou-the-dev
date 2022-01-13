@@ -10,7 +10,7 @@ type Props = {
   allProjects: Project[];
 };
 
-const Projects = ({ allProjects }: Props) => {
+const Work = ({ allProjects }: Props) => {
   return (
     <>
       <Layout>
@@ -18,7 +18,7 @@ const Projects = ({ allProjects }: Props) => {
           <title>Mou Dev - Projects</title>
         </Head>
         <Container>
-          <Intro title="Projects" />
+          <Intro title="Work" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             {allProjects.map((p, i) => (
               <ProjectPreview
@@ -38,7 +38,7 @@ const Projects = ({ allProjects }: Props) => {
   );
 };
 
-export default Projects;
+export default Work;
 
 export const getStaticProps = async () => {
   const allProjects = getAllProjects([
