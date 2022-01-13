@@ -1,0 +1,35 @@
+.colorfull-text {
+  animation: colorRotate 6s linear 0s infinite;
+}
+@keyframes colorRotate {
+  from {
+    color: #6161f1;
+  }
+  10% {
+    color: #0191f1;
+  }
+  50% {
+    color: #01f100;
+  }
+  75% {
+    color: #f13191;
+  }
+  100% {
+    color: #6161f1;
+  }
+}
+
+strong {
+  color: #000;
+}
+
+html.dark strong {
+  color: #fff;
+}
+
+.footer-background {
+  background-image: url("/footer-background-light.svg");
+}
+html.dark .footer-background {
+  background-image: url("/footer-background-dark.svg");
+}

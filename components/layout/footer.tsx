@@ -10,12 +10,7 @@ const Footer = () => {
   const d = new Date();
   let year = d.getFullYear();
   return (
-    <footer
-      style={{
-        backgroundImage: 'url("/footer-background.svg")',
-      }}
-      className="bg-accent-1 border-t border-accent-2"
-    >
+    <footer className="footer-background bg-accent-1">
       <Container>
         <div className="py-14 flex flex-col sm:flex-row items-center justify-between">
           <div className="flex items-center">
@@ -33,7 +28,7 @@ const Footer = () => {
             </SomeLink>
           </div>
           <div className="flex mt-8 md:mt-0">
-            <p className="text-text text-l pt-3 font-extralight drop-shadow-2xl ">
+            <p className="text-text dark:text-white text-l font-medium drop-shadow-2xl ">
               © Jens Mouridtsen {year}
             </p>
           </div>
@@ -52,7 +47,9 @@ const SomeLink = ({ href, children }: SOMELinkImgProps) => {
   return (
     <Link href={href}>
       <a className="mx-5" target="_blank" rel="noopener">
-        <div className="w-10 h-10 text-text hover:text-primary">{children}</div>
+        <div className="w-10 h-10 text-text hover:text-primary dark:text-white dark:hover:text-primary">
+          {children}
+        </div>
       </a>
     </Link>
   );
