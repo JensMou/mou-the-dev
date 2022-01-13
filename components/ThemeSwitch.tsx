@@ -11,8 +11,19 @@ const ThemeSwitch = () => {
   const darkTheme = useAppSelector((state) => state.theme.darkTheme);
   const dispatch = useAppDispatch();
 
+  /** Read browser default setting and set browser theme */
   useEffect(() => {
-    setClassTheme(darkTheme);
+    if (
+      darkTheme === undefined &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      dispatch(setTheme({ darkTheme: true }));
+    }
+  }, []);
+
+  useEffect(() => {
+    setClassTheme(!!darkTheme);
   }, [darkTheme]);
 
   return (
