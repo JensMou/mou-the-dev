@@ -15,7 +15,7 @@ const Index = () => {
         <Container>
           <div className="flex flex-col h-80v justify-center">
             <Intro title="Hello!" centered colorfull />
-            <p className="text-xl text-center leading-10">
+            <p className="text-l leading-7 md:text-xl md:leading-10 text-center ">
               I'm a <strong>frontend developer</strong> working in{" "}
               <strong>web development</strong>, <br /> inpired by{" "}
               <strong>great team dynamics</strong>, <strong>new tech</strong>{" "}
