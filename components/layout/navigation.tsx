@@ -2,6 +2,7 @@ import Link from "next/link";
 import ThemeSwitch from "../ThemeSwitch";
 import { useRouter } from "next/router";
 import cn from "classnames";
+import useScroll from "../../hooks/useScroll";
 
 type NavItemProp = {
   title: string;
@@ -17,8 +18,13 @@ const navItems: NavItemProp[] = [
 const Navigation = () => {
   const router = useRouter();
   const activePage = router.pathname;
+  const { scrollY } = useScroll();
   return (
-    <nav className="uppercase bg-foreground font-mono dark:bg-foregroundDark shadow-xl sticky top-0 py-5">
+    <nav
+      className={cn("uppercase font-mono sticky top-0 py-5", {
+        "bg-foreground dark:bg-foregroundDark shadow-xl": scrollY > 0,
+      })}
+    >
       <div className="container mx-auto">
         <div
           className={
