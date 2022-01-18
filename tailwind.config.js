@@ -10,12 +10,12 @@ module.exports = {
         background: "#fff",
         foreground: "#fff",
 
-        textDark: "#CCC",
+        textDark: "#DFDFDF",
         backgroundDark: "#000",
         foregroundDark: "#000",
 
-        glass: "rgba(255, 255, 255, .7)",
-        glassDark: "rgba(0, 0, 0, .7)",
+        glass: "rgba(255, 255, 255, .5)",
+        glassDark: "rgba(0, 0, 0, .5)",
 
         danger: "#ED254E",
         warning: "#E3B23C",
