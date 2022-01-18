@@ -10,7 +10,7 @@ const Intro = ({ title, centered, colorfull }: IntroProps) => {
         "colorfull-text": colorfull,
       })}
     >
-      <h1 className="font-serif whitespace-nowrap text-center md:text-left text-7xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
+      <h1 className="font-serif whitespace-nowrap text-center md:text-left text-8xl md:text-9xl font-bold tracking-tighter leading-tight md:pr-8">
         {title}
       </h1>
     </section>
