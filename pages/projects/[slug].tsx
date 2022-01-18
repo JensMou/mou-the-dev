@@ -33,7 +33,7 @@ const Project = ({ project, preview }: Props) => {
           <ProjectTitle>Loading…</ProjectTitle>
         ) : (
           <>
-            <article className="mb-32">
+            <article className="p-8 md:p-32 bg-glass dark:bg-glassDark rounded-2xl	">
               <Head>
                 <title>Mou Dev - {project.title}</title>
                 <meta property="og:image" content={project.ogImage.url} />

@@ -16,8 +16,8 @@ const Index = () => {
           <div className="flex flex-col h-80v justify-center">
             <Intro title="Hello!" centered colorfull />
             <p className="text-l leading-7 md:text-xl md:leading-10 text-center ">
-              I'm a <strong>frontend developer</strong> working in{" "}
-              <strong>web development</strong>, <br /> inpired by{" "}
+              My name is Jens and I'm a <strong>frontend developer</strong>{" "}
+              working in <strong>web development</strong>, <br /> inpired by{" "}
               <strong>great team dynamics</strong>, <strong>new tech</strong>{" "}
               and <strong>other developers</strong>.
               <br />

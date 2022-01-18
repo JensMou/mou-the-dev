@@ -18,11 +18,12 @@ const navItems: NavItemProp[] = [
 const Navigation = () => {
   const router = useRouter();
   const activePage = router.pathname;
+
   const { scrollY } = useScroll();
   return (
     <nav
-      className={cn("uppercase font-mono sticky top-0 py-5", {
-        "bg-foreground dark:bg-foregroundDark shadow-xl": scrollY > 0,
+      className={cn("bg-transparent uppercase font-mono sticky top-0 py-5", {
+        "bg-glass dark:bg-glassDark shadow-xl": scrollY > 1,
       })}
     >
       <div className="container mx-auto">

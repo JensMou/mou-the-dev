@@ -25,6 +25,9 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+  ],
+  "files": [
+    "./node_modules/redux-persist/types/integration/react.d.ts"
   ]
 }

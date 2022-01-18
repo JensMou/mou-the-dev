@@ -10,12 +10,12 @@ type Props = {
 const Layout = ({ preview, children }: Props) => {
   return (
     <>
-      <Navigation />
       <Meta />
-      <div className="font-sans min-h-screen">
+      <div className="min-h-screen">
+        <Navigation />
         <main>{children}</main>
+        <CookieAlert />
       </div>
-      <CookieAlert />
       <Footer />
     </>
   );

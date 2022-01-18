@@ -7,12 +7,15 @@ module.exports = {
         primary: "#067BC2",
 
         text: "#121212",
-        background: "#e7e7e7",
-        foreground: "#FAFAFB",
+        background: "#fff",
+        foreground: "#fff",
 
-        textDark: "#CCCCCC",
-        backgroundDark: "#222",
-        foregroundDark: "#121212",
+        textDark: "#CCC",
+        backgroundDark: "#000",
+        foregroundDark: "#000",
+
+        glass: "rgba(255, 255, 255, .7)",
+        glassDark: "rgba(0, 0, 0, .7)",
 
         danger: "#ED254E",
         warning: "#E3B23C",

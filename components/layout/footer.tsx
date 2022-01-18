@@ -10,7 +10,7 @@ const Footer = () => {
   const d = new Date();
   let year = d.getFullYear();
   return (
-    <footer className="footer-background bg-accent-1">
+    <footer className="bg-transparent">
       <Container>
         <div className="py-14 flex flex-col sm:flex-row items-center justify-between">
           <div className="flex items-center">
