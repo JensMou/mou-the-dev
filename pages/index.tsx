@@ -3,6 +3,7 @@ import Intro from "../components/Intro";
 import Head from "next/head";
 import Image from "next/image";
 import ProfileAvatar from "../public/avatars/JensMou.png";
+import Emoji from "../components/Emoji";
 
 const Index = () => {
   return (
@@ -12,7 +13,15 @@ const Index = () => {
       </Head>
       <Container>
         <div className="flex flex-col h-80v justify-center">
-          <Intro title="Hello!" centered colorfull />
+          <Intro
+            title={
+              <span>
+                Hello! <Emoji symbol="👽" label="Alien"></Emoji>
+              </span>
+            }
+            centered
+            colorfull
+          />
           <p className="text-2xl leading-10 md:text-2xl md:leading-10 text-center ">
             My name is Jens and I'm a <strong>frontend developer</strong>{" "}
             working in <strong>web development</strong>, <br /> inpired by{" "}

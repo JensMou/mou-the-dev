@@ -1,6 +1,7 @@
 import cn from "classnames";
+import { ReactNode } from "react";
 
-type IntroProps = { title: string; centered?: boolean; colorfull?: boolean };
+type IntroProps = { title: ReactNode; centered?: boolean; colorfull?: boolean };
 const Intro = ({ title, centered, colorfull }: IntroProps) => {
   return (
     <section

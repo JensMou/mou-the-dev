@@ -3,12 +3,12 @@ import ErrorPage from "next/error";
 import Container from "../../components/Container";
 import ProjectBody from "../../components/project/ProjectBody";
 import ProjectHeader from "../../components/project/ProjectHeader";
-import Layout from "../../components/layout/Layout";
 import { getProjectBySlug, getAllProjects } from "../../lib/api";
 import ProjectTitle from "../../components/project/ProjectTitle";
 import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
 import ProjectType from "../../types/project";
+import Button from "../../components/Button";
 
 type Props = {
   project: ProjectType;
@@ -22,9 +22,7 @@ const Project = ({ project, preview }: Props) => {
   }
   return (
     <Container>
-      <div className="text-l cursor-pointer py-5" onClick={() => router.back()}>
-        {"<-"} Go Back
-      </div>
+      <Button onClick={() => router.back()}>{"<-"} Go Back</Button>
       {router.isFallback ? (
         <ProjectTitle>Loading…</ProjectTitle>
       ) : (
