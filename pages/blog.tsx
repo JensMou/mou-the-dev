@@ -6,14 +6,12 @@ import Head from "next/head";
 const Blog = () => {
   return (
     <>
-      <Layout>
-        <Head>
-          <title>Mou Dev - Blog</title>
-        </Head>
-        <Container>
-          <Intro title="Blog" />
-        </Container>
-      </Layout>
+      <Head>
+        <title>Mou Dev - Blog</title>
+      </Head>
+      <Container>
+        <Intro title="Blog" />
+      </Container>
     </>
   );
 };

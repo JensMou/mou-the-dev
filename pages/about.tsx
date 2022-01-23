@@ -19,24 +19,22 @@ const skillArr: SkillArrProp[] = [
 const About = () => {
   return (
     <>
-      <Layout>
-        <Head>
-          <title>Mou Dev - About</title>
-        </Head>
-        <Container>
-          <Intro title="About" />
-          <dl>
-            {skillArr.map((e, i) => (
-              <div key={e.title + i}>
-                <dt>{e.title}</dt>
-                <dd>
-                  <RatingStars rating={e.rating} />
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </Container>
-      </Layout>
+      <Head>
+        <title>Mou Dev - About</title>
+      </Head>
+      <Container>
+        <Intro title="About" />
+        <dl>
+          {skillArr.map((e, i) => (
+            <div key={e.title + i}>
+              <dt>{e.title}</dt>
+              <dd>
+                <RatingStars rating={e.rating} />
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </Container>
     </>
   );
 };
