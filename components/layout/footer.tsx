@@ -14,16 +14,28 @@ const Footer = () => {
       <Container>
         <div className="py-14 flex flex-col sm:flex-row items-center justify-between">
           <div className="flex items-center">
-            <SomeLink href="https://www.linkedin.com/in/jens-mou/">
+            <SomeLink
+              href="https://www.linkedin.com/in/jens-mou/"
+              title="Link to my Linkedin profile"
+            >
               <LinkedinPic />
             </SomeLink>
-            <SomeLink href="https://www.instagram.com/jensmou/">
+            <SomeLink
+              href="https://www.instagram.com/jensmou/"
+              title="Link to my Instagram profile"
+            >
               <InstagramPic />
             </SomeLink>
-            <SomeLink href="https://github.com/JensMou/">
+            <SomeLink
+              href="https://github.com/JensMou/"
+              title="Link to my Github profile"
+            >
               <GithubPic />
             </SomeLink>
-            <SomeLink href="https://twitter.com/JensMou">
+            <SomeLink
+              href="https://twitter.com/JensMou"
+              title="Link to my Twitter profile"
+            >
               <TwitterPic />
             </SomeLink>
           </div>
@@ -41,12 +53,13 @@ const Footer = () => {
 type SOMELinkImgProps = {
   href: string;
   children: React.ReactElement;
+  title: string;
 };
 
-const SomeLink = ({ href, children }: SOMELinkImgProps) => {
+const SomeLink = ({ href, children, title }: SOMELinkImgProps) => {
   return (
     <Link href={href}>
-      <a className="mx-5" target="_blank" rel="noopener">
+      <a title={title} className="mx-5" target="_blank" rel="noopener">
         <div className="w-10 h-10 text-text hover:text-primary dark:text-white dark:hover:text-primary">
           {children}
         </div>

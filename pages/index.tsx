@@ -1,6 +1,5 @@
 import Container from "../components/Container";
 import Intro from "../components/Intro";
-import Layout from "../components/layout/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import ProfileAvatar from "../public/avatars/JensMou.png";
@@ -24,7 +23,7 @@ const Index = () => {
             <strong>Original</strong>... right?
           </p>
           <div className="w-44 mt-10 mx-auto">
-            <Image src={ProfileAvatar} />
+            <Image alt="Profile avatar of me" src={ProfileAvatar} />
           </div>
         </div>
       </Container>
