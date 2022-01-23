@@ -21,35 +21,30 @@ const Project = ({ project, preview }: Props) => {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout preview={preview}>
-      <Container>
-        <div
-          className="text-l cursor-pointer py-5"
-          onClick={() => router.back()}
-        >
-          {"<-"} Go Back
-        </div>
-        {router.isFallback ? (
-          <ProjectTitle>Loading…</ProjectTitle>
-        ) : (
-          <>
-            <article className="p-8 md:p-32 bg-glass dark:bg-glassDark rounded-2xl	">
-              <Head>
-                <title>Mou Dev - {project.title}</title>
-                <meta property="og:image" content={project.ogImage.url} />
-              </Head>
-              <ProjectHeader
-                title={project.title}
-                coverImage={project.coverImage}
-                date={project.date}
-                author={project.author}
-              />
-              <ProjectBody content={project.content} />
-            </article>
-          </>
-        )}
-      </Container>
-    </Layout>
+    <Container>
+      <div className="text-l cursor-pointer py-5" onClick={() => router.back()}>
+        {"<-"} Go Back
+      </div>
+      {router.isFallback ? (
+        <ProjectTitle>Loading…</ProjectTitle>
+      ) : (
+        <>
+          <article className="p-8 md:p-32 bg-glass dark:bg-glassDark rounded-2xl	">
+            <Head>
+              <title>Mou Dev - {project.title}</title>
+              <meta property="og:image" content={project.ogImage.url} />
+            </Head>
+            <ProjectHeader
+              title={project.title}
+              coverImage={project.coverImage}
+              date={project.date}
+              author={project.author}
+            />
+            <ProjectBody content={project.content} />
+          </article>
+        </>
+      )}
+    </Container>
   );
 };
 
