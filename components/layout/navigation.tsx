@@ -10,7 +10,7 @@ type NavItemProp = {
 };
 const navItems: NavItemProp[] = [
   { title: "Home", href: "/" },
-  { title: "Work", href: "/work" },
+  { title: "Projects", href: "/projects" },
   { title: "Blog", href: "/blog" },
   { title: "About", href: "/about" },
 ];

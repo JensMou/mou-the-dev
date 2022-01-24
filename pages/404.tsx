@@ -11,7 +11,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>Mou Dev - 404</title>
+        <title>Mou Dev - 404 - Page Not Found</title>
       </Head>
       <Container>
         <Intro
@@ -22,7 +22,7 @@ const About = () => {
           }
         />
         <h2 className="text-2xl my-5">Page could not be found</h2>
-        <Button onClick={() => router.back()}>{"->"} Go Back</Button>
+        <Button onClick={() => router.back()}>Back</Button>
       </Container>
     </>
   );

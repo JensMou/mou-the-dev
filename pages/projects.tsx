@@ -10,7 +10,7 @@ type Props = {
   allProjects: Project[];
 };
 
-const Work = ({ allProjects }: Props) => {
+const Projects = ({ allProjects }: Props) => {
   return (
     <>
       <Head>
@@ -36,7 +36,7 @@ const Work = ({ allProjects }: Props) => {
   );
 };
 
-export default Work;
+export default Projects;
 
 export const getStaticProps = async () => {
   const allProjects = getAllProjects([
