@@ -25,8 +25,7 @@ const Index = () => {
           <p className="text-2xl leading-10 md:text-2xl md:leading-10 text-center ">
             My name is Jens and I'm a <strong>frontend developer</strong>{" "}
             working in <strong>web development</strong>, <br /> inpired by{" "}
-            <strong>great team dynamics</strong>, <strong>new tech</strong> and{" "}
-            <strong>other developers</strong>.
+            <strong>new tech</strong> and <strong>other developers</strong>.
             <br />
             This is my personal <strong>portfolio/blog</strong>. <br />
             <strong>Original</strong>... right?

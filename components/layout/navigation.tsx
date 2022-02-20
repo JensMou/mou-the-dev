@@ -12,7 +12,6 @@ const navItems: NavItemProp[] = [
   { title: "Home", href: "/" },
   { title: "Projects", href: "/projects" },
   { title: "Blog", href: "/blog" },
-  { title: "About", href: "/about" },
 ];
 
 const Navigation = () => {
@@ -29,7 +28,7 @@ const Navigation = () => {
       <div className="container mx-auto">
         <div
           className={
-            "text-xl space-x-6 space-x-8 flex justify-center sm:justify-end px-5"
+            "text-xl space-x-8 flex justify-center sm:justify-end px-5"
           }
         >
           {navItems.map((item, index) => {

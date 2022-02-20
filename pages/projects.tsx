@@ -1,7 +1,6 @@
 import Container from "../components/Container";
 import ProjectPreview from "../components/project/ProjectPreview";
 import Intro from "../components/Intro";
-import Layout from "../components/layout/Layout";
 import { getAllProjects } from "../lib/api";
 import Head from "next/head";
 import Project from "../types/project";
@@ -17,7 +16,7 @@ const Projects = ({ allProjects }: Props) => {
         <title>Mou Dev - Projects</title>
       </Head>
       <Container>
-        <Intro title="Work" />
+        <Intro title="Projects" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {allProjects.map((p, i) => (
             <ProjectPreview
