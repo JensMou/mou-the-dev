@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import ErrorPage from "next/error";
 import Container from "../../components/Container";
 import ProjectBody from "../../components/project/ProjectBody";
 import ProjectHeader from "../../components/project/ProjectHeader";
@@ -9,19 +8,21 @@ import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
 import PostType from "../../types/post";
 import Button from "../../components/Button";
+import useScroll from "../../hooks/useScroll";
+import ProgressBar from "../../components/ProgressBar";
 
 type Props = {
   post: PostType;
-  preview?: boolean;
 };
 
-const Post = ({ post, preview }: Props) => {
+const Post = ({ post }: Props) => {
   const router = useRouter();
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />;
-  }
+
+  const { percentageHeight } = useScroll();
+
   return (
     <Container>
+      <ProgressBar percentage={"" + percentageHeight} />
       <Button onClick={() => router.back()}>{"<-"} Go Back</Button>
       {router.isFallback ? (
         <ProjectTitle>Loading…</ProjectTitle>
