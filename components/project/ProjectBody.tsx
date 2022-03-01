@@ -14,13 +14,12 @@ const ProjectBody = ({ content }: Props) => {
         const id = val
           .replace("<h2>", "")
           .replace("</h2>", "")
-          .replace(" ", "-")
-          .toLocaleLowerCase();
+          .replace(" ", "-");
         str = str.replace(
           val,
           `<a href="#${id}">${val.replace(
             "<h2>",
-            `<h2 class="hover:underline" id="${id}" name="${id}">`
+            `<h2 class="hover:underline pt-20" id="${id}" name="${id}">`
           )}</a>`
         );
       }
@@ -31,7 +30,7 @@ const ProjectBody = ({ content }: Props) => {
   return (
     <div
       className={markdownStyles["markdown"]}
-      dangerouslySetInnerHTML={{ __html: modifiedContent }}
+      dangerouslySetInnerHTML={{ __html: content }}
     />
   );
 };
