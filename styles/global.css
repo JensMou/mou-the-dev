@@ -43,9 +43,9 @@ html ::-moz-selection {
     rgb(230, 250, 230),
     rgb(230, 230, 250)
   );
-  background-size: 400% 400%;
+  background-repeat: no-repeat;
+  background-size: cover;
   animation: moveBackground 12s ease infinite;
-  height: 100vh;
 }
 
 html.dark .gradient-background {
