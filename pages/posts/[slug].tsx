@@ -8,8 +8,8 @@ import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
 import PostType from "../../types/post";
 import Button from "../../components/Button";
-import useScroll from "../../hooks/useScroll";
 import ProgressBar from "../../components/ProgressBar";
+import useScroll from "../../hooks/useScroll";
 
 type Props = {
   post: PostType;
@@ -19,16 +19,15 @@ const Post = ({ post }: Props) => {
   const router = useRouter();
 
   const { percentageHeight } = useScroll();
-
   return (
     <Container>
-      <ProgressBar percentage={"" + percentageHeight} />
       <Button onClick={() => router.back()}>{"<-"} Go Back</Button>
       {router.isFallback ? (
         <ProjectTitle>Loading…</ProjectTitle>
       ) : (
         <>
           <article className="p-8 md:p-32 bg-glass dark:bg-glassDark rounded-2xl	">
+            <ProgressBar percentage={`${percentageHeight}`} />
             <Head>
               <title>Mou Dev - {post.title}</title>
               <meta property="og:image" content={post.ogImage.url} />

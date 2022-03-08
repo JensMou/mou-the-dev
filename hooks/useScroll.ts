@@ -35,27 +35,18 @@ export const useScroll = () => {
     };
   }, [handleScrollEvent]);
 
-  const arr = document.getElementsByTagName("body");
-  const element = arr[0];
-  const height = element.scrollHeight - element.clientHeight;
+  const height =
+    window.scrollY /
+    (document.documentElement.scrollHeight -
+      document.documentElement.clientHeight);
 
-  let percentageHeight = Math.round(
-    (-element.getBoundingClientRect().top / height) * 100
-  );
-
-  let sum = 0;
-  if (Math.sign(percentageHeight)) {
-    if (percentageHeight < 101) {
-      sum = percentageHeight;
-    } else {
-      sum = 100;
-    }
-  }
+  const sum = Math.round(height * 100);
+  const percentageHeight = sum > 100 ? 100 : sum < 0 ? 0 : sum;
   return {
     scrollY: state.scrollY,
     scrollX: state.scrollX,
     scrollDirection: state.scrollDirection,
-    percentageHeight: sum,
+    percentageHeight,
   };
 };
 
