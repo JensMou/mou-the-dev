@@ -74,11 +74,15 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     if (field === "content") {
       items[field] = content;
     }
+    if (field === "numberOfWords") {
+      items["numberOfWords"] = content.split(/\s+/).length + "";
+    }
 
     if (typeof data[field] !== "undefined") {
       items[field] = data[field];
     }
   });
+
   return items;
 }
 

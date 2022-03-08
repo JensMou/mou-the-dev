@@ -27,6 +27,7 @@ const Blog = ({ allPosts }: Props) => {
               author={p.author}
               slug={p.slug}
               excerpt={p.excerpt}
+              numberOfWords={p.numberOfWords}
             />
           ))}
         </div>
@@ -45,6 +46,7 @@ export const getStaticProps = async () => {
     "author",
     "coverImage",
     "excerpt",
+    "numberOfWords",
   ]);
 
   return {

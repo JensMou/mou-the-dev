@@ -2,6 +2,7 @@ import Avatar from "../Avatar";
 import DateFormatter from "../DateFormatter";
 import Link from "next/link";
 import Author from "../../types/author";
+import Emoji from "../Emoji";
 
 type Props = {
   title: string;
@@ -10,6 +11,7 @@ type Props = {
   excerpt: string;
   author: Author;
   slug: string;
+  numberOfWords: string;
 };
 
 const HeroProject = ({
@@ -19,7 +21,9 @@ const HeroProject = ({
   excerpt,
   author,
   slug,
+  numberOfWords,
 }: Props) => {
+  const parsedNumberOfWords = parseInt(numberOfWords);
   return (
     <Link as={`/posts/${slug}`} href="/posts/[slug]">
       <a className="bg-glass dark:bg-glassDark hover:underline rounded-md p-8 my-5">
@@ -36,6 +40,10 @@ const HeroProject = ({
             <Avatar name={author.name} picture={author.picture} />
             <p className="text-xs mr-1 italic">
               <DateFormatter dateString={date} />
+            </p>
+            <p>
+              <Emoji symbol={"📖"} label={"Reading time"} />{" "}
+              {`~${Math.round(parsedNumberOfWords / 200) * 0.6} min`}
             </p>
           </div>
         </section>
