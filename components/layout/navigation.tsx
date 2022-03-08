@@ -21,14 +21,17 @@ const Navigation = () => {
   const { scrollY } = useScroll();
   return (
     <nav
-      className={cn("bg-transparent uppercase font-mono sticky top-0 py-5", {
-        "bg-glass dark:bg-glassDark shadow-xl": scrollY > 1,
-      })}
+      className={cn(
+        "bg-transparent uppercase font-mono sticky top-0 py-5 z-10",
+        {
+          "bg-semiGlass dark:bg-semiGlassDark shadow-xl": scrollY > 1,
+        }
+      )}
     >
       <div className="container mx-auto">
         <div
           className={
-            "text-xl space-x-8 flex justify-center sm:justify-end px-5"
+            "text-xl font-bold space-x-8 flex justify-center sm:justify-end px-5"
           }
         >
           {navItems.map((item, index) => {

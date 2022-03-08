@@ -14,6 +14,9 @@ module.exports = {
         backgroundDark: "#000",
         foregroundDark: "#000",
 
+        semiGlass: "rgba(255, 255, 255, .85)",
+        semiGlassDark: "rgba(0, 0, 0, .85)",
+
         glass: "rgba(255, 255, 255, .5)",
         glassDark: "rgba(0, 0, 0, .5)",
 
