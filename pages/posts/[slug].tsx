@@ -10,6 +10,7 @@ import PostType from "../../types/post";
 import Button from "../../components/Button";
 import ProgressBar from "../../components/ProgressBar";
 import useScroll from "../../hooks/useScroll";
+import BackButton from "../../components/BackButton";
 
 type Props = {
   post: PostType;
@@ -21,7 +22,7 @@ const Post = ({ post }: Props) => {
   const { percentageHeight } = useScroll();
   return (
     <Container>
-      <Button onClick={() => router.back()}>{"<-"} Go Back</Button>
+      <BackButton />
       {router.isFallback ? (
         <ProjectTitle>Loading…</ProjectTitle>
       ) : (

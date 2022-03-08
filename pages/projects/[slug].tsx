@@ -8,7 +8,7 @@ import ProjectTitle from "../../components/project/ProjectTitle";
 import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
 import ProjectType from "../../types/project";
-import Button from "../../components/Button";
+import BackArrow from "../../components/BackButton";
 
 type Props = {
   project: ProjectType;
@@ -22,7 +22,7 @@ const Project = ({ project, preview }: Props) => {
   }
   return (
     <Container>
-      <Button onClick={() => router.back()}>{"<-"} Go Back</Button>
+      <BackArrow />
       {router.isFallback ? (
         <ProjectTitle>Loading…</ProjectTitle>
       ) : (

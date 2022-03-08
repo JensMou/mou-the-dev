@@ -1,13 +1,10 @@
 import Container from "../components/Container";
 import Intro from "../components/Intro";
 import Head from "next/head";
-import { useRouter } from "next/router";
-import Button from "../components/Button";
 import Emoji from "../components/Emoji";
+import BackArrow from "../components/BackButton";
 
 const About = () => {
-  const router = useRouter();
-
   return (
     <>
       <Head>
@@ -22,7 +19,7 @@ const About = () => {
           }
         />
         <h2 className="text-2xl my-5">Page could not be found</h2>
-        <Button onClick={() => router.back()}>Back</Button>
+        <BackArrow />
       </Container>
     </>
   );
