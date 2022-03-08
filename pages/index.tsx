@@ -23,11 +23,12 @@ const Index = () => {
             colorfull
           />
           <p className="text-2xl leading-10 md:text-2xl md:leading-10 text-center ">
-            My name is Jens and I'm a <strong>frontend developer</strong>{" "}
-            working in <strong>web development</strong>, <br /> inpired by{" "}
-            <strong>new tech</strong> and <strong>other developers</strong>.
+            My name is <strong>Jens "Mou"</strong> and I'm a{" "}
+            <strong>Frontend Developer</strong> working in{" "}
+            <strong>Web Development</strong>, <br /> inpired by{" "}
+            <strong>New Tech</strong> and <strong>Learning New Stuff</strong>
             <br />
-            This is my personal <strong>portfolio/blog</strong>. <br />
+            This is my personal <strong>Portfolio / Blog</strong>. <br />
             <strong>Original</strong>... right?
           </p>
           <div className="w-44 mt-10 mx-auto">
