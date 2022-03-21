@@ -24,6 +24,7 @@ const HeroProject = ({
   numberOfWords,
 }: Props) => {
   const parsedNumberOfWords = parseInt(numberOfWords);
+  const readingTime = Math.round((parsedNumberOfWords / 200) * 0.6);
   return (
     <Link as={`/posts/${slug}`} href="/posts/[slug]">
       <a className="bg-glass dark:bg-glassDark hover:underline rounded-md p-8 my-5">
@@ -43,7 +44,7 @@ const HeroProject = ({
             </p>
             <p>
               <Emoji symbol={"📖"} label={"Reading time"} />{" "}
-              {`~${Math.round(parsedNumberOfWords / 200) * 0.6} min`}
+              {`~${readingTime} min`}
             </p>
           </div>
         </section>
