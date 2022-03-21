@@ -28,8 +28,10 @@ const Index = () => {
             <strong>Web Development</strong>, <br /> inpired by{" "}
             <strong>New Tech</strong> and <strong>Learning New Stuff</strong>
             <br />
-            This is my personal <strong>Portfolio / Blog</strong>. <br />
-            <strong>Original</strong>... right?
+            This is my personal <strong>Portfolio / Blog</strong>
+            <br />
+            <strong>Original</strong>
+            <span className="italic">... right?</span>
           </p>
           <div className="w-44 mt-10 mx-auto">
             <Image alt="Profile avatar of me" src={ProfileAvatar} />
