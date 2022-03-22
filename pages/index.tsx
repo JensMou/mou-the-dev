@@ -12,30 +12,26 @@ const Index = () => {
         <title>Mou Dev - Home</title>
       </Head>
       <Container>
-        <div className="flex flex-col h-80v justify-center">
+        <div className="flex flex-col justify-center sm:mt-40">
           <Intro
             title={
               <span>
-                Hello! <Emoji symbol="👽" label="Alien"></Emoji>
+                Hello!
+                <Emoji symbol="👽" label="Alien"></Emoji>
               </span>
             }
             centered
             colorfull
           />
-          <p className="text-2xl leading-10 md:text-2xl md:leading-10 text-center ">
-            My name is <strong>Jens "Mou"</strong> and I'm a{" "}
-            <strong>Frontend Developer</strong> working in{" "}
-            <strong>Web Development</strong>, <br /> inpired by{" "}
-            <strong>New Tech</strong> and <strong>Learning New Stuff</strong>
+          <p className="text-2xl sm:text-6xl sm:leading-normal text-center ">
+            My name is <strong>Jens "Mou"</strong> and this is my personal{" "}
+            <strong>Portfolio / Blog</strong> <br />
             <br />
-            This is my personal <strong>Portfolio / Blog</strong>
-            <br />
-            <strong>Original</strong>
-            <span className="italic">... right?</span>
+            <div className="w-44 mt-10 mx-auto">
+              <Image alt="Profile avatar of me" src={ProfileAvatar} />
+            </div>
+            <strong>Original</strong> <span className="italic">... right?</span>{" "}
           </p>
-          <div className="w-44 mt-10 mx-auto">
-            <Image alt="Profile avatar of me" src={ProfileAvatar} />
-          </div>
         </div>
       </Container>
     </>
