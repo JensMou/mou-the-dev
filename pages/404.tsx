@@ -1,4 +1,4 @@
-import Container from "../components/Container2";
+import Container from "../components/Container";
 import Intro from "../components/Intro";
 import Head from "next/head";
 import Emoji from "../components/Emoji";

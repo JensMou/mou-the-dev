@@ -1,4 +1,4 @@
-import Container from "../Container2";
+import Container from "../Container";
 import LinkedinPic from "../../public/icons/linkedin.svg";
 import InstagramPic from "../../public/icons/instagram.svg";
 import GithubPic from "../../public/icons/github.svg";

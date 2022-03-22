@@ -1,6 +1,6 @@
-import Footer from "./Footer2";
-import Meta from "./Meta2";
-import Navigation from "./Navigation2";
+import Footer from "./Footer";
+import Meta from "./Meta";
+import Navigation from "./Navigation";
 import CookieAlert from "../CookieAlert";
 type Props = {
   children: React.ReactNode;

@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import Container from "../../components/Container2";
+import Container from "../../components/Container";
 import ProjectBody from "../../components/project/ProjectBody";
 import ProjectHeader from "../../components/project/ProjectHeader";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
