@@ -1,4 +1,4 @@
-import Container from "../components/Container";
+import Container from "../components/Container2";
 import ProjectPreview from "../components/project/ProjectPreview";
 import Intro from "../components/Intro";
 import { getAllProjects } from "../lib/api";

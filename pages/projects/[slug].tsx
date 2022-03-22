@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import Container from "../../components/Container";
+import Container from "../../components/Container2";
 import ProjectBody from "../../components/project/ProjectBody";
 import ProjectHeader from "../../components/project/ProjectHeader";
 import { getProjectBySlug, getAllProjects } from "../../lib/api";

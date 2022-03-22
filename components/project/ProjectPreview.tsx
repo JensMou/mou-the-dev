@@ -1,4 +1,4 @@
-import Avatar from "../Avatar";
+import Avatar from "../Avatar2";
 import DateFormatter from "../DateFormatter";
 import CoverImage from "./CoverImage";
 import Link from "next/link";

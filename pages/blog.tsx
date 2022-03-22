@@ -1,4 +1,4 @@
-import Container from "../components/Container";
+import Container from "../components/Container2";
 import Intro from "../components/Intro";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
