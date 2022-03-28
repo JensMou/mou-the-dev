@@ -1,38 +1,16 @@
-import { useState } from "react";
 import markdownStyles from "./markdown-styles.module.css";
 
 type Props = {
-  content: string;
+    content: string;
 };
 
 const ProjectBody = ({ content }: Props) => {
-  const [modifiedContent, setModifiedContent] = useState<string>(() => {
-    let str = content + "";
-    const arr = content.match(/<h2>(.*?)<\/h2>/g) ?? [];
-    arr.forEach((val) => {
-      if (val) {
-        const id = val
-          .replace("<h2>", "")
-          .replace("</h2>", "")
-          .replace(" ", "-");
-        str = str.replace(
-          val,
-          `<a href="#${id}">${val.replace(
-            "<h2>",
-            `<h2 class="hover:underline pt-20" id="${id}" name="${id}">`
-          )}</a>`
-        );
-      }
-    });
-    return str;
-  });
-
-  return (
-    <div
-      className={markdownStyles["markdown"]}
-      dangerouslySetInnerHTML={{ __html: content }}
-    />
-  );
+    return (
+        <div
+            className={markdownStyles["markdown"]}
+            dangerouslySetInnerHTML={{ __html: content }}
+        />
+    );
 };
 
 export default ProjectBody;

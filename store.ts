@@ -10,21 +10,21 @@ export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 
 const reducers = combineReducers({
-  alert: alertReducer,
-  theme: themeReducer,
+    alert: alertReducer,
+    theme: themeReducer,
 });
 
 const persistConfig = {
-  key: "root",
-  storage,
+    key: "root",
+    storage,
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);
 
 const store = configureStore({
-  reducer: persistedReducer,
-  devTools: process.env.NODE_ENV !== "production",
-  middleware: [thunk],
+    reducer: persistedReducer,
+    devTools: process.env.NODE_ENV !== "production",
+    middleware: [thunk],
 });
 
 export default store;

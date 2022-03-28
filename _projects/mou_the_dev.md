@@ -4,10 +4,10 @@ excerpt: "This very page..."
 coverImage: "/project_images/mou_the_dev.png"
 date: "2022-01-01T05:35:07.322Z"
 author:
-  name: Jens Mou
-  picture: "/avatars/JensMou.png"
+    name: Jens Mou
+    picture: "/avatars/JensMou.png"
 ogImage:
-  url: "/project_images/mou_the_dev.png"
+    url: "/project_images/mou_the_dev.png"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

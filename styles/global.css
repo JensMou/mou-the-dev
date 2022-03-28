@@ -1,102 +1,102 @@
 /* Text selection color */
 /* IE9  - Also picked up by most modern browsers */
 html.dark ::selection {
-  background: #fff;
-  color: #121212;
-  text-shadow: none;
+    background: #fff;
+    color: #121212;
+    text-shadow: none;
 }
 /* Safari & Chrome - Webkit Rendering */
 html.dark ::-webkit-selection {
-  background: #fff;
-  color: #121212;
-  text-shadow: none;
+    background: #fff;
+    color: #121212;
+    text-shadow: none;
 }
 /* Mozilla based - Gecko Rendering */
 html.dark ::-moz-selection {
-  background: #fff;
-  color: #121212;
-  text-shadow: none;
+    background: #fff;
+    color: #121212;
+    text-shadow: none;
 }
 
 html ::selection {
-  background: #000;
-  color: #ccc;
-  text-shadow: none;
+    background: #000;
+    color: #ccc;
+    text-shadow: none;
 }
 /* Safari & Chrome - Webkit Rendering */
 html ::-webkit-selection {
-  background: #000;
-  color: #ccc;
-  text-shadow: none;
+    background: #000;
+    color: #ccc;
+    text-shadow: none;
 }
 /* Mozilla based - Gecko Rendering */
 html ::-moz-selection {
-  background: #000;
-  color: #ccc;
-  text-shadow: none;
+    background: #000;
+    color: #ccc;
+    text-shadow: none;
 }
 
 .gradient-background {
-  background: linear-gradient(
-    -45deg,
-    rgb(250, 230, 230),
-    rgb(230, 250, 230),
-    rgb(230, 230, 250)
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: moveBackground 12s ease infinite;
+    background: linear-gradient(
+        -45deg,
+        rgb(250, 230, 230),
+        rgb(230, 250, 230),
+        rgb(230, 230, 250)
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: moveBackground 12s ease infinite;
 }
 
 html.dark .gradient-background {
-  background: radial-gradient(rgb(5, 25, 25), rgb(25, 5, 25), rgb(25, 25, 5));
-  background-size: 600% 600%;
+    background: radial-gradient(rgb(5, 25, 25), rgb(25, 5, 25), rgb(25, 25, 5));
+    background-size: 600% 600%;
 }
 
 @keyframes moveBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .colorfull-text {
-  animation: colorRotate 6s linear 0s infinite;
+    animation: colorRotate 6s linear 0s infinite;
 }
 @keyframes colorRotate {
-  from {
-    color: #6161f1;
-  }
-  10% {
-    color: #0191f1;
-  }
-  50% {
-    color: #01f100;
-  }
-  75% {
-    color: #f13191;
-  }
-  100% {
-    color: #6161f1;
-  }
+    from {
+        color: #6161f1;
+    }
+    10% {
+        color: #0191f1;
+    }
+    50% {
+        color: #01f100;
+    }
+    75% {
+        color: #f13191;
+    }
+    100% {
+        color: #6161f1;
+    }
 }
 
 strong {
-  color: #000;
+    color: #000;
 }
 
 html.dark strong {
-  color: #fff;
+    color: #fff;
 }
 
 .footer-background {
-  background-image: url("/footer-background-light.svg");
+    background-image: url("/footer-background-light.svg");
 }
 html.dark .footer-background {
-  background-image: url("/footer-background-dark.svg");
+    background-image: url("/footer-background-dark.svg");
 }

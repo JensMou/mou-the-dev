@@ -11,82 +11,98 @@ import ProjectType from "../../types/project";
 import BackArrow from "../../components/BackButton";
 
 type Props = {
-  project: ProjectType;
-  preview?: boolean;
+    project: ProjectType;
+    preview?: boolean;
 };
 
 const Project = ({ project, preview }: Props) => {
-  const router = useRouter();
-  if (!router.isFallback && !project?.slug) {
-    return <ErrorPage statusCode={404} />;
-  }
-  return (
-    <Container>
-      <BackArrow />
-      {router.isFallback ? (
-        <ProjectTitle>Loading…</ProjectTitle>
-      ) : (
-        <>
-          <article className="p-8 md:p-32 bg-glass dark:bg-glassDark rounded-2xl	">
-            <Head>
-              <title>Mou Dev - {project.title}</title>
-              <meta property="og:image" content={project.ogImage.url} />
-            </Head>
-            <ProjectHeader
-              title={project.title}
-              coverImage={project.coverImage}
-              date={project.date}
-              author={project.author}
-            />
-            <ProjectBody content={project.content} />
-          </article>
-        </>
-      )}
-    </Container>
-  );
+    const router = useRouter();
+    if (!router.isFallback && !project?.slug) {
+        return <ErrorPage statusCode={404} />;
+    }
+    return (
+        <Container>
+            <BackArrow />
+            {router.isFallback ? (
+                <ProjectTitle>Loading…</ProjectTitle>
+            ) : (
+                <>
+                    <article className="p-8 md:p-32 bg-glass dark:bg-glassDark rounded-2xl	">
+                        <Head>
+                            <title>Mou Dev - {project.title}</title>
+                            <meta
+                                property="og:image"
+                                content={project.ogImage.url}
+                            />
+                        </Head>
+                        <ProjectHeader
+                            title={project.title}
+                            coverImage={project.coverImage}
+                            date={project.date}
+                            author={project.author}
+                        />
+                        <ProjectBody content={project.content} />
+                    </article>
+                </>
+            )}
+        </Container>
+    );
 };
 
 export default Project;
 
 type Params = {
-  params: {
-    slug: string;
-  };
+    params: {
+        slug: string;
+    };
 };
 
+/**
+ *
+ *
+ * @export
+ * @param {Params} { params }
+ * @return {*}
+ */
 export async function getStaticProps({ params }: Params) {
-  const project = getProjectBySlug(params.slug, [
-    "title",
-    "date",
-    "slug",
-    "author",
-    "content",
-    "ogImage",
-    "coverImage",
-  ]);
-  const content = await markdownToHtml(project.content || "");
+    const project = getProjectBySlug(params.slug, [
+        "title",
+        "date",
+        "slug",
+        "author",
+        "content",
+        "ogImage",
+        "coverImage",
+    ]);
+    const content = await markdownToHtml(project.content || "");
 
-  return {
-    props: {
-      project: {
-        ...project,
-        content,
-      },
-    },
-  };
+    return {
+        props: {
+            project: {
+                ...project,
+                content,
+            },
+        },
+    };
 }
 
+/**
+ *
+ *
+ * @export
+ * @return {*}
+ */
 export async function getStaticPaths() {
-  const projects = getAllProjects(["slug"]);
+    const projects = getAllProjects(["slug"]);
 
-  return {
-    paths: projects.map((project) => {
-      return {
-        params: {
-          slug: project.slug,
-        },
-      };
-    }),
-    fallback: false,
-  };
+    return {
+        paths: projects.map((project) => {
+            return {
+                params: {
+                    slug: project.slug,
+                },
+            };
+        }),
+        fallback: false,
+    };
 }
