@@ -12,7 +12,8 @@ const CoverImage = ({ title, src, slug }: Props) => {
             <Image
                 src={src}
                 alt={`Cover Image for ${title}`}
-                className={"h-60 w-auto mx-auto"}
+                width={640}
+                height={511}
             />
         </div>
     );

@@ -1,9 +1,8 @@
 import Container from "../components/Container";
 import Intro from "../components/Intro";
 import Head from "next/head";
-import Image from "next/image";
-import ProfileAvatar from "../public/avatars/JensMou.png";
 import Emoji from "../components/Emoji";
+import Image from "next/image";
 
 const Index = () => {
     return (
@@ -23,20 +22,22 @@ const Index = () => {
                         centered
                         colorfull
                     />
-                    <p className="text-2xl sm:text-6xl sm:leading-normal text-center ">
-                        My name is <strong>Jens {`&quot;Mou&quot;`}</strong> and
+                    <p className="text-2xl sm:text-6xl sm:leading-normal text-center">
+                        My name is <strong>Jens &quot;Mou&quot;</strong> and
                         this is my personal <strong>Portfolio / Blog</strong>{" "}
                         <br />
                         <br />
-                        <div className="w-44 mt-10 mx-auto">
-                            <Image
-                                alt="Profile avatar of me"
-                                src={ProfileAvatar}
-                            />
-                        </div>
                         <strong>Original</strong>{" "}
                         <span className="italic">... right?</span>{" "}
                     </p>
+                    <div className="text-center">
+                        <Image
+                            alt="Profile avatar of me"
+                            src="/avatars/JensMou.png"
+                            width={200}
+                            height={200}
+                        />
+                    </div>
                 </div>
             </Container>
         </>

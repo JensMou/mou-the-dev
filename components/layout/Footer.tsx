@@ -1,8 +1,7 @@
 import Container from "../Container";
-import LinkedinPic from "../../public/icons/linkedin.svg";
-import InstagramPic from "../../public/icons/instagram.svg";
-import GithubPic from "../../public/icons/github.svg";
-import TwitterPic from "../../public/icons/twitter.svg";
+
+const LinkedinPic = require("../../public/icons/linkedin.svg") as string;
+const GithubPic = require("../../public/icons/github.svg") as string;
 
 import Link from "next/link";
 
@@ -21,22 +20,10 @@ const Footer = () => {
                             <LinkedinPic />
                         </SomeLink>
                         <SomeLink
-                            href="https://www.instagram.com/jensmou/"
-                            title="Link to my Instagram profile"
-                        >
-                            <InstagramPic />
-                        </SomeLink>
-                        <SomeLink
                             href="https://github.com/JensMou/"
                             title="Link to my Github profile"
                         >
                             <GithubPic />
-                        </SomeLink>
-                        <SomeLink
-                            href="https://twitter.com/JensMou"
-                            title="Link to my Twitter profile"
-                        >
-                            <TwitterPic />
                         </SomeLink>
                     </div>
                     <div className="flex mt-8 md:mt-0">
