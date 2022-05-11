@@ -9,7 +9,7 @@ export const useScroll = () => {
         scrollDirection: "",
     });
 
-    const handleScrollEvent = useCallback((e) => {
+    const handleScrollEvent = useCallback(() => {
         setState((prevState) => {
             const prevLastScrollTop = prevState.lastScrollTop;
             const bodyOffset = document.body.getBoundingClientRect();
@@ -27,7 +27,7 @@ export const useScroll = () => {
 
     useEffect(() => {
         const scrollListener = (e: any) => {
-            handleScrollEvent(e);
+            handleScrollEvent();
         };
         window.addEventListener("scroll", scrollListener);
 

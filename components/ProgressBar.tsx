@@ -1,10 +1,11 @@
+import { ReactElement, ReactPortal } from "react";
 import { createPortal } from "react-dom";
 
 type Props = {
     percentage: string;
 };
 
-const Progressbar = ({ percentage }: Props): React.ReactElement => {
+const Progressbar = ({ percentage }: Props): ReactElement | ReactPortal => {
     const bodyArr = document.getElementsByTagName("body");
     const body = bodyArr[0];
     const elem = (
@@ -27,10 +28,9 @@ const Progressbar = ({ percentage }: Props): React.ReactElement => {
         </>
     );
     if (body) {
-        return createPortal(elem, body);
-    } else {
-        return <></>;
+        createPortal(elem, body);
     }
+    return <></>;
 };
 
 export default Progressbar;
